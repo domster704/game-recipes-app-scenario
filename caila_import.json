@@ -1,0 +1,18 @@
+{
+  "project" : {
+    "id" : "spisok_zadach-17154-rQW",
+    "name" : "spisok_zadach-17154-rQW",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "UTC",
+    "businessShared" : false,
+    "business" : false
+  },
+  "intents" : [ ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+}
