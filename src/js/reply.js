@@ -1,5 +1,5 @@
 function reply(body, response){
-    var replyData = {
+    let replyData = {
         type: "raw",
         body: body
     };    
@@ -9,11 +9,11 @@ function reply(body, response){
 
 
 function addAction(action, context){
-    var command = {
+    let command = {
         type: "smart_app_data",
         action: action
     };
-    for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
+    for (let index = 0; context.response.replies && index < context.response.replies.length; index++) {
         if (context.response.replies[index].type === "raw" &&
             context.response.replies[index].body &&
             context.response.replies[index].body.items
@@ -28,7 +28,7 @@ function addAction(action, context){
 
 
 function addSuggestions(suggestions, context) {
-    var buttons = [];
+    let buttons = [];
     
     suggestions.forEach (function(suggest) {
         buttons.push(
@@ -41,8 +41,8 @@ function addSuggestions(suggestions, context) {
             }
         );
     });
-    
-    // for (var index = 0; context.response.replies && index < context.response.replies.length; index ++) {
+
+    // for (let index = 0; context.response.replies && index < context.response.replies.length; index ++) {
     //     if (context.response.replies[index].type === "raw" &&
     //         context.response.replies[index].body
     //     ) {
