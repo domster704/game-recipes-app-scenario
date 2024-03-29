@@ -49,8 +49,8 @@ if (request &&
 }
 
 function get_id_by_selected_item(request){
-    let items = get_items(request);
-    let selected_item = get_selected_item(request);
+    var items = get_items(request);
+    var selected_item = get_selected_item(request);
     if (selected_item && items) {
         return items[selected_item.index].id
     }
