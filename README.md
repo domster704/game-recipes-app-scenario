@@ -1,3 +1,3 @@
-# SmartApp Backend
+# GameRecipes SmartApp Code
 
 made on SmartApp Code.
