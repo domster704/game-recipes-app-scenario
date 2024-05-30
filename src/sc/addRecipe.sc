@@ -10,4 +10,4 @@ theme: /
             a: Записано!
 
         script:
-            addNote($parseTree._anyText, $context);
+            addRecipe($parseTree._anyText, $context);
