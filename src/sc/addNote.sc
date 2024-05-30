@@ -10,5 +10,4 @@ theme: /
             a: Записано!
 
         script:
-            log('addNote: context: ' + JSON.stringify($context))
             addNote($parseTree._anyText, $context);

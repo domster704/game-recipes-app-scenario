@@ -1,6 +1,6 @@
-function addNote(note, context) {
+function addRecipe(note, context) {
     addAction({
-        type: "add_note",
+        type: "add_recipe",
         note: note
     }, context);
 }
