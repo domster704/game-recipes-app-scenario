@@ -1,15 +1,36 @@
-name: SmartApp
+name: game-recipe
 
 entryPoint:
   - entryPoint.sc
 
 botEngine: v2
 language: ru
-
 sts:
   noMatchThreshold: 0.2
 caila:
   noMatchThreshold: 0.2
+
+scriptsPreLoad:
+  global:
+    - /jslib/moment.min.js
+    - /jslib/underscore.js
+    - /jsapi/common.js
+    - /jsapi/smartPush.js
+    - /jsapi/smartProfile.js
+    - /jsapi/smartRating.js
+    - /jsapi/jivo.js
+  local:
+    - /jsapi/mail.js
+    - /jsapi/reactions.js
+    - /jsapi/http.js
+    - /jsapi/fetch.js
+
+messages:
+  onError:
+    defaultMessage: Что-то пошло не так
+    locales:
+      ru: Что-то пошло не так
+      en: Failed on request processing
 
 tests:
   include:
