@@ -14,6 +14,7 @@ patterns:
     $AnyText = $nonEmptyGarbage
 
 theme: /
+
     state: Start
         # При запуске приложения с кнопки прилетит сообщение /start.
         q!: $regex</start>
@@ -23,7 +24,7 @@ theme: /
         q!: (запусти | открой | вруби) GameRecipes
         a: Начнём. Данное приложение позволяет просматривать рецепты из игр, сериалов, фильмов и книг. С помощью него можно готовить популярные и экзотические блюда, добавлять свои рецепты и ингредиенты.
         script:
-            addSuggestions(["Помощь", "Добавить рецепт картофель"], $context);
+            addSuggestions(["Добавить рецепт картофель"], $context);
 
     state: Help
         q!: * (Помощь | *помощ* | умееш* | можеш*) *
@@ -31,7 +32,5 @@ theme: /
 
     state: Fallback
         event!: noMatch
-        script:
-            log('entryPoint: Fallback: context: ' + JSON.stringify($context))
         a: Я не понимаю
 
